@@ -1,0 +1,27 @@
+{% extends "WebApp/base.html" %}
+
+{% block content %}
+
+<style>
+    .formContacto{
+        background-color:#212529 ;
+        width: 50%;
+        margin:10px auto;
+        border-radius: 14px;
+        padding: 1px 0px;
+    }
+</style>
+    <div class="content">
+        <h1 style="width: 50%; margin: auto;">CONTACTO</h1>
+        <div class="formContacto">
+            <form action="" method="POST" style="text-align: center;">
+                {% csrf_token %}
+                {%if "valido" in request.GET %}
+                    <h3 style="color: white;">formulario enviado correctamente</h3>
+                {% endif %}
+                <table class="tab" style="margin:20px auto; color: aliceblue;">{{ formulario.as_table }}</table>
+                <input class="btn btn-outline-light"  type="submit" value="enviar" style="width:150px;">
+            </form>
+        </div>
+    </div>
+{% endblock %}

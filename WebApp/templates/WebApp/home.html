@@ -1,0 +1,101 @@
+{% extends "WebApp/base.html" %}
+{% load static %}
+
+{% block content %}
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div style="background-color:black">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://3.bp.blogspot.com/-RkDsuk3hL-E/UHPUBJVvRNI/AAAAAAAACGU/0q4vg3k0a5M/s1600/reischmann_1_gr.jpg"
+          style="opacity:0.4" class="d-block w-100" alt="..." width="100%" height="100%"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#777">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="btn btn-dark disabled">Tienda de calzados</h1>
+              <p><a class="btn btn-dark" href="#">Ir a Calzado</a></p>
+            </div>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/fotos-premium/vista-superior-concepto-ropa-deportiva-ropa-gimnasia-zapatillas-deportivas-telefonos-inteligentes-accesorios-deportivos-fondo-azul-espacio-copia_160097-61.jpg"
+          style="opacity:0.4" class="d-block w-100" alt="..." width="100%" height="100%"
+          xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="btn btn-dark disabled">Ropa deportiva y Accesorios</h1>
+            <p><a class="btn btn-lg btn-dark" href="#">Ir a ropa deportiva y Accesorios</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://content.ib2c.com.ar/224/1/resources/images/tiendas-2019-hombre-11.jpg" style="opacity:0.4"
+          class="d-block w-100" alt="..." width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="#777"></rect>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="btn btn-dark disabled">Tienda de ropa urbana</h1>
+            <p><a class="btn btn-lg btn-dark" href="#">Ir a Ropa Urbana</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div class="card-group" style="margin:20px">
+  <div class="card">
+    <div class="card bg-dark" style="margin:10px">
+      <div class="card-header">
+        WebApp Envios
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-white">La mejor tienda de envios :)</h5>
+        <p class="card-text text-white">Compra tus productos que llegan en 24hs</p>
+        <a href="/tienda" class="btn btn-outline-light">Ir a Tienda</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card bg-dark" style="margin:10px">
+      <div class="card-header">
+        WebApp Envios
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-white">La mejor tienda de envios :)</h5>
+        <p class="card-text text-white">Compra tus productos que llegan en 24hs</p>
+        <a href="/tienda" class="btn btn-outline-light">Ir a Tienda</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card bg-dark" style="margin:10px">
+      <div class="card-header">
+        WebApp Envios
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-white">La mejor tienda de envios :)</h5>
+        <p class="card-text text-white">Compra tus productos que llegan en 24hs</p>
+        <a href="/tienda" class="btn btn-outline-light">Ir a Tienda</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

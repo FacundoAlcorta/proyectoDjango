@@ -1,0 +1,120 @@
+{% extends "WebApp/base.html" %}
+
+{% block content %}
+<style>
+    .card {
+        width: 300px;
+        margin: 15px;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-content {
+        padding: 20px;
+        background-color: rgb(201, 201, 201);
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin: 0 0 10px;
+    }
+
+    .card-price {
+        font-size: 1.2rem;
+        color: #03b303;
+        margin: 0 0 10px;
+    }
+
+    .card-category {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    @media (max-width: 576px) {
+        .card {
+            width: 100%;
+        }
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .card-container {
+            justify-content: center;
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+        .card-container {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    .btn-more {
+        display: inline-block;
+        padding: 8px 16px;
+        border: 2px solid black;
+        border-radius: 4px;
+        background-color: transparent;
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .btn-more:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .card-content .btn-more {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<div class="content">
+    <div class="card"
+        style="width: 150px; align-items: center; background-color:#212529;position: fixed; border-color: #ffffff;">
+        <p style="color:aliceblue ;font-size: 1.5rem;">total: ${{importe_total_carro}}</p>
+        <a href="{% url 'carro:carro' %}" class="btn btn-outline-light" style="width:150px;">Ver carrito <i
+                class="bi bi-cart3"></i></a>
+    </div>
+    <div class="card-container">
+        {% for producto in productos %}
+        <div class="card">
+            <div class="card-image" style="background-image: url('{{ producto.imagen.url }}')"></div>
+            <div class="card-content" style="background-color: #212529; color: aliceblue;">
+                <h2 class="card-title">{{producto.nombre}}</h2>
+                <p class="card-price">${{producto.precio}}</p>
+                <p class="card-category">{{producto.categoria}}</p>
+                <a href="producto/{{producto.id}}" class="btn btn-outline-light" style="width:100%;">Ver más</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
